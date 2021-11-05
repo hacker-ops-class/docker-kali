@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+  kali_xfce:
+    build: ./
+    image: kali-html5
+    container_name: kali-html5
+    ports:
+    - 80:6080
+    environment:
+    - VNC_PASSWORD=UQcyNFQ
+    - ROOT_PASSWORD=UQcyNFQ
+    - XUSER_PASSWORD=UQcyNFQ
+    cap_add:
+      - NET_ADMIN
+    restart: always
+    # volumes:
+    # - ./home:/home/xuser
